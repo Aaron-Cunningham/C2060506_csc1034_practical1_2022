@@ -13,8 +13,9 @@ class WalkingPanda(ShowBase):
         self.scene = self.loader.loadModel("models/environment")
         # Reparent the model to render.
         self.scene.reparentTo(self.render)
+        #Changes the camera position to see panda
+        self.cam.set_pos(0, -10., 1.5)
         # Apply scale and position transforms on the model.
-        self.cam.set_pos(0., -10., 1.)
         self.scene.setScale(0.25, 0.25, 0.25)
         self.scene.setPos(-8, 42, 0)
 
@@ -33,7 +34,9 @@ class WalkingPanda(ShowBase):
         # Loop its animation.
         self.pandaActor.loop("walk")
 
-        # Define a procedure to move the camera.
+
+
+    # Define a procedure to move the camera.
     def spinCameraTask(self, task):
 
         angleDegrees = task.time * 6.0
