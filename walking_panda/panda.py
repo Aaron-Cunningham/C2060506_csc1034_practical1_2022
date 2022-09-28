@@ -34,7 +34,7 @@ class WalkingPanda(ShowBase):
         self.pandaActor.loop("walk")
 
         #Plays background music in a loop
-        pandaMusic = self.loader.loadSfx('/Users/aaroncunningham/Downloads/Sneaky-Snitch.mp3')
+        pandaMusic = self.loader.loadSfx('/Users/aaroncunningham/PycharmProjects/C2060506_csc1034_practical1_2022/sounds/Sneaky-Snitch.mp3')
         pandaMusic.setLoop(True)
         pandaMusic.play()
 
