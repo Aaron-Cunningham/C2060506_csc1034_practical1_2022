@@ -4,6 +4,7 @@ from .panda import WalkingPanda
 def cli():
     walking = WalkingPanda()
     walking.run()
+
 from . import panda
 
 import argparse
