@@ -1,1 +1,3 @@
 panda3d
+playsound
+PyObjC
