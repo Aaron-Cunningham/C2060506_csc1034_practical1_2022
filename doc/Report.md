@@ -11,7 +11,7 @@ organisations a way to control and secure access to organisation resources like 
 For my project I was instructed to use this function in order to allow Newcastle University to see my commits and pushes for my 
 Walking Panda project. Furthermore, with using SAML and SSO I was able to copy the template which was already created by the 
 organisation to kick-start my project. 
-https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on
+
 
 ## Command Line Controls
 In order to run some arguments in the Walking Panda project I had to use Command Line Controls such as `python walking_panda.py --no-rotate`.
