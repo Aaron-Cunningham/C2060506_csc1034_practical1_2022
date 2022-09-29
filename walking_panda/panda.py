@@ -8,9 +8,9 @@ from direct.task import Task
 
 class WalkingPanda(ShowBase):
 
-    def __init__(self, no_rotate=False, scale=1):
+    def __init__(self, no_rotate=False, scale=1, colour_blue=False):
 
-        ShowBase.__init__(self, )
+        ShowBase.__init__(self)
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
         # Reparent the model to render.
@@ -21,15 +21,23 @@ class WalkingPanda(ShowBase):
         self.scene.setScale(0.25, 0.25, 0.25)
         self.scene.setPos(-8, 42, 0)
 
+
+
         # Uses scale argument to change size of panda
         if scale:
             # Load and transform the panda actor.
             self.pandaActor = Actor("models/panda-model",
                                     {"walk": "models/panda-walk4"})
             self.pandaActor.setScale(0.005 * scale, 0.005 * scale, 0.005 * scale)
+
             self.pandaActor.reparentTo(self.render)
             # Loop its animation.
             self.pandaActor.loop("walk")
+
+            # Makes the Panda blue if argument is run
+        if colour_blue:
+            pass
+            self.pandaActor.setColor(0.12, 0.33, 0.9, 0.8)
 
         # If statement to run no_rotate argument
         if no_rotate:
