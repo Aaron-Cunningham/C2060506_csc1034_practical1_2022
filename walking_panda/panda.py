@@ -8,7 +8,8 @@ from direct.task import Task
 
 class WalkingPanda(ShowBase):
 
-    def __init__(self, no_rotate=False, scale=False):
+    def __init__(self, no_rotate=False, scale=1):
+
         ShowBase.__init__(self, )
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
@@ -20,6 +21,16 @@ class WalkingPanda(ShowBase):
         self.scene.setScale(0.25, 0.25, 0.25)
         self.scene.setPos(-8, 42, 0)
 
+        # Uses scale argument to change size of panda
+        if scale:
+            # Load and transform the panda actor.
+            self.pandaActor = Actor("models/panda-model",
+                                    {"walk": "models/panda-walk4"})
+            self.pandaActor.setScale(0.005 * scale, 0.005 * scale, 0.005 * scale)
+            self.pandaActor.reparentTo(self.render)
+            # Loop its animation.
+            self.pandaActor.loop("walk")
+
         # If statement to run no_rotate argument
         if no_rotate:
             pass
@@ -27,21 +38,9 @@ class WalkingPanda(ShowBase):
             # Add the spinCameraTask procedure to the task manager.
             self.taskMgr.add(self.spinCameraTask, "SpinCameraTask")
 
-        # Load and transform the panda actor.
-        self.pandaActor = Actor("models/panda-model",
-                                {"walk": "models/panda-walk4"})
-
-        if scale:
-            self.pandaActor.setScale(0.015, 0.015, 0.015)
-            self.cam.set_pos(1, 1, 1)
-        else:
-            self.pandaActor.setScale(0.005, 0.005, 0.005)
-        self.pandaActor.reparentTo(self.render)
-        # Loop its animation.
-        self.pandaActor.loop("walk")
-
         # Plays copyright free background music in a loop.
-        pandaMusic = self.loader.loadSfx('/Users/aaroncunningham/PycharmProjects/C2060506_csc1034_practical1_2022/sounds/Sneaky-Snitch.mp3')
+        pandaMusic = self.loader.loadSfx(
+            '/Users/aaroncunningham/PycharmProjects/C2060506_csc1034_practical1_2022/sounds/Sneaky-Snitch.mp3')
         pandaMusic.setLoop(True)
         pandaMusic.play()
 
@@ -53,5 +52,3 @@ class WalkingPanda(ShowBase):
         self.camera.setHpr(angleDegrees, 0, 0)
 
         return Task.cont
-
-
