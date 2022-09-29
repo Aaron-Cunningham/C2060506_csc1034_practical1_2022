@@ -13,8 +13,7 @@ def cli():
     parser = argparse.ArgumentParser(prog="walking_panda")
     parser.add_argument("--no-rotate", help="Suppress Rotation",
                         action="store_true")
-    parser.add_argument("--scale", help="Enlarge panda",
-                        action="store_true")
+    parser.add_argument("--scale", type=float, default=1, help="Enlarge panda * original size > scale = 1")
 
 
     args = parser.parse_args()
