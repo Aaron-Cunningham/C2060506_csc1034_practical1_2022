@@ -9,3 +9,4 @@ This package is build as a part of the CSC1034: Portfolio-1.
 will times the original panda size by 2
 + Type in the terminal `python walking_panda.py --colour-blue` to make the Panda blue
 + Type in the terminal `python walking_panda.py --pandas="int value here"` to duplicate the Pandas 
++ Use arrow keys to control the panda on x and y axis.
