@@ -17,6 +17,8 @@ def cli():
 
     parser.add_argument("--colour-blue", help="Makes the panda blue",
                         action="store_true")
+    parser.add_argument("--pandas", type=int, default=1, help="Duplicate pandas")
+
 
 
     args = parser.parse_args()
