@@ -1,13 +1,15 @@
 from .panda import WalkingPanda
-
+import argparse
+from . import panda
 
 def cli():
     walking = WalkingPanda()
     walking.run()
 
-from . import panda
 
-import argparse
+
+
+
 
 def cli():
     parser = argparse.ArgumentParser(prog="walking_panda")
@@ -19,11 +21,7 @@ def cli():
                         action="store_true")
     parser.add_argument("--pandas", type=int, default=1, help="Duplicate pandas")
 
-
-
     args = parser.parse_args()
 
     walking = panda.WalkingPanda(**vars(args))
     walking.run()
-
-
