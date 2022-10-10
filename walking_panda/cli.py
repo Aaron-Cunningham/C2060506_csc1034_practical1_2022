@@ -1,14 +1,5 @@
-from .panda import WalkingPanda
 import argparse
 from . import panda
-
-def cli():
-    walking = WalkingPanda()
-    walking.run()
-
-
-
-
 
 
 def cli():
