@@ -3,32 +3,18 @@ from direct.actor.Actor import Actor
 from direct.showbase.ShowBase import ShowBase
 from direct.task import Task
 
-# Keymap functions default set to false
-keyMap = {
-    "up": False,
-    "down": False,
-    "left": False,
-    "right": False
-}
-
-
-# function to update key map
-def keyMapUpdate(key, state):
-    keyMap[key] = state
-
 
 class WalkingPanda(ShowBase):
 
     def __init__(self, no_rotate=False, scale=1, colour_blue=False, pandas=1):
-
+        """Renders, sets position and runs arguments for the scenery and panda.
+        Sets pandas size and stores keymap functions"""
         ShowBase.__init__(self)
 
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
-        # Reparent the model to render.
+        # Re-parent the model to render.
         self.scene.reparentTo(self.render)
-        # Changes the camera position to see panda
-        self.cam.set_pos(0, -10., 1.5)
         # Apply scale and position transforms on the model.
         self.scene.setScale(0.25, 0.25, 0.25)
         self.scene.setPos(-8, 42, 0)
@@ -48,13 +34,13 @@ class WalkingPanda(ShowBase):
         self.accept("arrow_up-up", keyMapUpdate, ["down", False])
 
         # Uses scale argument to change size of panda
+
         if scale:
             # Load and transform the panda actor.
             self.pandaActor = Actor("models/panda-model",
                                     {"walk": "models/panda-walk4"})
             self.pandaActor.setScale(0.005 * scale, 0.005 * scale, 0.005 * scale)
             self.pandaActor.reparentTo(self.render)
-
             # Loop its animation.
             self.pandaActor.loop("walk")
 
@@ -65,6 +51,8 @@ class WalkingPanda(ShowBase):
 
         # If statement to run no_rotate argument
         if no_rotate:
+            # Moves the camera position back to see the panda in no rotate argument
+            self.cam.set_pos(0, -10, 1.5)
             pass
         else:
             # Add the spinCameraTask procedure to the task manager.
@@ -100,8 +88,8 @@ class WalkingPanda(ShowBase):
         # Runs update function
         self.taskMgr.add(self.updatePandaPos, "updatePandaPos")
 
-    # function to update panda position on keypress
     def updatePandaPos(self, task):
+        """Controls the pandas speed and position when using key functions"""
         pos = self.pandaActor.getPos()
         # if statements to move panda on keypress
         if keyMap["left"]:
@@ -114,13 +102,29 @@ class WalkingPanda(ShowBase):
             pos.y -= self.speed
 
         self.pandaActor.setPos(pos)
+
         return task.cont
 
     # Define a procedure to move the camera.
     def spinCameraTask(self, task):
+        """Rotates the camera around the panda"""
         angleDegrees = task.time * 6.0
         angleRadians = angleDegrees * (pi / 180.0)
         self.camera.setPos(20 * sin(angleRadians), -20.0 * cos(angleRadians), 3)
         self.camera.setHpr(angleDegrees, 0, 0)
 
         return Task.cont
+
+
+def keyMapUpdate(key, state):
+    """Updates the keymap when a key is pressed and un-pressed"""
+    keyMap[key] = state
+
+
+# Keymap functions default set to false
+keyMap = {
+    "up": False,
+    "down": False,
+    "left": False,
+    "right": False
+}
