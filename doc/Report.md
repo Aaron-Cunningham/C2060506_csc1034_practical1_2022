@@ -1,10 +1,12 @@
 
-## Introduction 
+Introduction
+------------
 In order to build a functioning program in python, there are a few different tools at your disposal which can be used. 
 This report will be reflecting on the tools I've used and not used before in order to successfully 
 develop a working program that demonstrates a scene with a walking panda. This will include GitHub, Command Line Controls, and IDEs.
 
-## GitHub
+GitHub
+------
 GitHub is a great platform to use to publish, share, and edit projects for other people, and organisations which someone may
 work for. Although GitHub isn't totally new to me as I've used this website in the past, I was introduced to some new functions I wasn't 
 aware of such as SAML SSO. SAML and SSO which translates to Security Assertion Markup Language and Single Sign-on allow 
@@ -14,7 +16,8 @@ Walking Panda project. Furthermore, by using SAML and SSO I was able to copy the
 organisation to kick-start my project. This tool I will certainly be using in the future. 
 
 
-## Command Line Controls
+Command Line Controls
+---------------------
 In order to run some arguments in the Walking Panda project, I had to use Command Line Controls such as `python walking_panda.py --no-rotate`.
 Previously when I programmed I did not use this tool. Command Line Control is the text that is inputted into the terminal section in PyCharm. 
 Using the command previously stated in the terminal allowed the program to run without the camera rotating. This is a useful feature for me, especially to test to see if my
@@ -24,20 +27,24 @@ files inside. For example, to access the Walking Panda project I would use this 
 and then the command `python walking_panda.py` to run the program.
 
 
-## IDE
+IDE
+---
 This tool isn't new to me, but during this project, I was exposed to tools within the IDE which are new to me. The IDE in this project 
 was very useful, it allowed me to test my program to see if it worked as intended, it also gave me suggestions while writing my 
 program which speeds up the process of writing the program out. Not only did it assist with testing and suggesting code, but it also allowed
 imports of various libraries such as Panda3D and playsound. 
 
-## Conclusion
+Conclusion
+----------
 The tools spoken about in this report were all used in the development of the Walking Panda project, more so than others. Each tool
 discussed has its own responsibility. For instance, GitHub is very useful for publishing files that include
 code, licenses, and instructions on how to use the program and on the other hand the IDE is where the program is developed. 
 Two very different tools, but each as important in the development process.
 
-## Bibliography
+Bibliography
+------------
 GitHub Docs. 2022. About authentication with SAML single sign-on - GitHub Enterprise Cloud Docs. [online] Available at: <https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on> [Accessed 28 September 2022].
+
 
 
 
