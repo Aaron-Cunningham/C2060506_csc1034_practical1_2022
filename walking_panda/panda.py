@@ -2,11 +2,13 @@ from math import pi, sin, cos
 from direct.actor.Actor import Actor
 from direct.showbase.ShowBase import ShowBase
 from direct.task import Task
+from panda3d.core import Point3
+from direct.interval.IntervalGlobal import Sequence
 
 
 class WalkingPanda(ShowBase):
 
-    def __init__(self, no_rotate=False, scale=1, colour_blue=False, pandas=1):
+    def __init__(self, no_rotate=False, scale=1, colour_blue=False, pandas=1, animation=False):
         """Renders, sets position and runs arguments for the scenery and panda.
         Sets pandas size and stores keymap functions"""
         ShowBase.__init__(self)
@@ -76,6 +78,28 @@ class WalkingPanda(ShowBase):
                 x.setPos(counter, 0, 0)
                 counter += 3
                 x.loop("walk")
+
+        if animation:
+            # Panda walking back and forth.
+            posInterval1 = self.pandaActor.posInterval(13,
+                                                       Point3(0, -10, 0),
+                                                       startPos=Point3(0, 10, 0))
+            posInterval2 = self.pandaActor.posInterval(13,
+                                                       Point3(0, 10, 0),
+                                                       startPos=Point3(0, -10, 0))
+            hprInterval1 = self.pandaActor.hprInterval(3,
+                                                       Point3(180, 0, 0),
+                                                       startHpr=Point3(0, 0, 0))
+            hprInterval2 = self.pandaActor.hprInterval(3,
+                                                       Point3(0, 0, 0),
+                                                       startHpr=Point3(180, 0, 0))
+
+            # Create and play the sequence that coordinates the intervals.
+            self.pandaPace = Sequence(posInterval1, hprInterval1,
+                                      posInterval2, hprInterval2,
+                                      name="pandaPace")
+            self.pandaPace.loop()
+
 
         # Plays copyright free background music in a loop.
         pandaMusic = self.loader.loadSfx(
