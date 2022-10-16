@@ -1,7 +1,7 @@
 
 Introduction
 ------------
-In order to build a functioning program in python, there are a few different tools at your disposal which can be used. 
+In order to build a functioning program in python, there are a few different tools at your disposal which I had to use. 
 This report will be reflecting on the tools I've used and not used before in order to successfully 
 develop a working program that demonstrates a scene with a walking panda. This will include GitHub, Command Line Controls, and IDEs.
 
