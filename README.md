@@ -7,7 +7,7 @@ Portfolio 1 instructions
 
 + Use this argument in the terminal `python walking_panda.py` to see a walking panda rotating
 + Use this argument in the terminal `python walking_panda.py --no-rotate` for a non-rotating camera panda
-+ Use this argument in the terminal `python walking_panda.py --scale="add a float value here"` for example `python walking_panda.py --scale=2` 
++ Use this argument in the terminal `python walking_panda.py --scale=` for example `python walking_panda.py --scale=2` 
 will times the original panda size by 2
 + Use this argument in the terminal `python walking_panda.py --colour-blue` to make the Panda blue
 + Use this argument in the terminal `python walking_panda.py --pandas="int value here"` to duplicate the Pandas
