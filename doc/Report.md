@@ -2,8 +2,7 @@
 Introduction
 ------------
 In order to build a functioning program in python, there are a few different tools at your disposal which I had to use. 
-This report will be reflecting on the tools I've used and not used before in order to successfully 
-develop a working program that demonstrates a scene with a walking panda. This will include GitHub, Command Line Controls, and IDEs.
+This report will be reflecting on them tool in which I used.
 
 GitHub
 ------
@@ -34,12 +33,11 @@ was very useful, it allowed me to test my program to see if it worked as intende
 program which speeds up the process of writing the program out. Not only did it assist with testing and suggesting code, but it also allowed
 imports of various libraries such as Panda3D and playsound. 
 
-Conclusion
+Version control
 ----------
-The tools spoken about in this report were all used in the development of the Walking Panda project, more so than others. Each tool
-discussed has its own responsibility. For instance, GitHub is very useful for publishing files that include
-code, licenses, and instructions on how to use the program and on the other hand the IDE is where the program is developed. 
-Two very different tools, but each as important in the development process.
+This tool has been crucial for me in this project. It has allowed me to return to previous versions of my program whenever there was an issue with my code that I couldn't figure out.
+This is a tool I will be using throughout my time at Newcastle University and when I go into full-time employment. This tool to me has to be one of the most important just for the reason
+that I can return to previous versions of my program, especially if I somehow lost my file or if it was completely broken.
 
 Bibliography
 ------------
