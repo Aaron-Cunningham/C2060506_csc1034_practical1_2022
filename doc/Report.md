@@ -8,12 +8,10 @@ GitHub
 ------
 GitHub is a great platform to use to publish, share, and edit projects for other people, and organisations which someone may
 work for. Although GitHub isn't totally new to me as I've used this website in the past, I was introduced to some new functions I wasn't 
-aware of such as SAML SSO. SAML and SSO which translates to Security Assertion Markup Language and Single Sign-on allow 
-organisations a way to control and secure access to organisation resources like repositories, issues, and pull requests (About authentication with SAML single sign-on - GitHub Enterprise Cloud Docs, 2022).
-For my project, I was instructed to use this function in order to allow Newcastle University to see my commits and pushes for my 
+aware of such as SAML SSO. For my project, I was instructed to use this function in order to allow Newcastle University to see my commits and pushes for my 
 Walking Panda project. Furthermore, by using SAML and SSO I was able to copy the template which was already created by the 
-organisation to kick-start my project. This tool I will certainly be using in the future. 
-
+organisation to kick-start my project. This tool I will certainly be using in the future whether thats for future projects 
+at Newcastle or within employment if my employer uses this tool.
 
 Command Line Controls
 ---------------------
@@ -36,17 +34,5 @@ imports of various libraries such as Panda3D and playsound.
 Version control
 ----------
 This tool has been crucial for me in this project. It has allowed me to return to previous versions of my program whenever there was an issue with my code that I couldn't figure out.
-This is a tool I will be using throughout my time at Newcastle University and when I go into full-time employment. This tool to me has to be one of the most important just for the reason
-that I can return to previous versions of my program, especially if I somehow lost my file or if it was completely broken.
-
-Bibliography
-------------
-GitHub Docs. 2022. About authentication with SAML single sign-on - GitHub Enterprise Cloud Docs. [online] Available at: <https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on> [Accessed 28 September 2022].
-
-
-
-
-
-
-
-
+This is a tool I will be using throughout my time at Newcastle University and when I go into full-time employment. This tool to me has to be one of the most important just for the simple reason
+that I can return and access previous versions of my program, especially if I somehow lost my file or if it was completely broken.
